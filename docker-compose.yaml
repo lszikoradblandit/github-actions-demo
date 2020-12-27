@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  server.backend:
+    image: server-backend:latest
+    container_name: server-backend
+    build:
+      context: ./backend
+    networks:
+      - counter-network
+    depends_on:
+      - redis
+
+  app.frontend:
+    image: app-frontend:lastest
+    container_name: app-frontend
+    build:
+      context: ./frontend
+    networks:
+      - counter-network
+    depends_on:
+      - server.backend
+    ports:
+      - "8080:80"
+
+  redis:
+    image: redis:alpine
+    networks:
+      - counter-network
+
+networks:
+  counter-network:
