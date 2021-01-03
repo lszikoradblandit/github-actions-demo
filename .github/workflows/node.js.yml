@@ -65,7 +65,7 @@ jobs:
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
-          git remote set-url origin https://${token}@github.com/${repository}
+          git remote set-url origin https://$token@github.com/$repository
         env:
           user_name: 'lszikoradblandit'
           user_email: 'lszikora@dblandit.com'
