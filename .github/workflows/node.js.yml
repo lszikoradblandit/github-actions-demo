@@ -21,22 +21,23 @@ jobs:
     steps:
       - name: Descargar el código
         uses: actions/checkout@v2
-        with:
-          path: ./backend
       - name: Setup Node.js utilizando versión ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: Instalar las dependencias
         run: npm install
+        working-directory: ./backend
       - name: Ejecutar los tests
         run: npm test
+        working-directory: ./backend
       - name: Deploy en Heroku
         uses: akhileshns/heroku-deploy@v3.8.8
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "github-actions-example-nodejs"
           heroku_email: "lszikora@dblandit.com"
+          appdir: ./backend
 
 #  build-frontend:
 #
