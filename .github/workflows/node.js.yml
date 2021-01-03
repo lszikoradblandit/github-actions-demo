@@ -65,15 +65,13 @@ jobs:
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
-          git remote set-url origin https://04dd6208500e48fb6ea087b98076ce96893b0854@github.com/lszikoradblandit/github-actions-demo
+          git remote set-url origin $remote_url
         env:
           user_name: 'lszikoradblandit'
           user_email: 'lszikora@dblandit.com'
-          github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          respository: ${{ github.repository }}
+          remote_url: ${{ secrets.REMOTE_URL }}
       - name: Desplegar la app en GH Pages
         run: |
-          git remote get-url origin
           npm run clean
           npm run deploy
         working-directory: ./frontend
