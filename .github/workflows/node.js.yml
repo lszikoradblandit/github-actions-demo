@@ -72,5 +72,7 @@ jobs:
           token: ${{ secrets.GH_PAGES_TOKEN }}
           respository: ${{ github.repository }}
       - name: Desplegar la app en GH Pages
-        run: npm run deploy
+        run: |
+          npm run clean
+          npm run deploy
         working-directory: ./frontend
