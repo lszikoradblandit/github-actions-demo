@@ -71,7 +71,7 @@ jobs:
       - name: Desplegar la app en GH Pages
         run: |
           npm run clean
-          npm run deploy -- -r https://${token}@github.com/${repository}
+          npm run deploy -- -r https://$token@github.com/$repository
         env:
           token: ${{ secrets.GH_PAGES_TOKEN }}
           respository: ${{ github.repository }}
