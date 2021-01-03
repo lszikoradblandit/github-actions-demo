@@ -32,7 +32,6 @@ jobs:
         run: npm test
         working-directory: ./backend
 
-
   publish-backend:
     runs-on: ubuntu-latest
 
@@ -49,16 +48,19 @@ jobs:
           heroku_email: "lszikora@dblandit.com"
           appdir: ./backend
 
+  build-frontend:
 
-        #  build-frontend:
-#
-#    runs-on: ubuntu-latest
-#
-#      steps:
-#        - uses: actions/checkout@v2
-#        - name: Use Node.js 14.x
-#          uses: actions/setup-node@v1
-#          with:
-#            node-version: 14.x
-#        - run: npm ci
-#        -
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js utilizando versión 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Instalar las dependencias
+        run: npm install
+        working-directory: ./frontend
+      - name: Desplegar la app en GH Pages
+        run: npm deploy
+        working-directory: ./frontend
