@@ -62,5 +62,5 @@ jobs:
         run: npm install
         working-directory: ./frontend
       - name: Desplegar la app en GH Pages
-        run: npm deploy
+        run: npm run deploy
         working-directory: ./frontend
