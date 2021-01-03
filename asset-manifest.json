@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/github-actions-demo/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/github-actions-demo/static/js/main.35f3b1c4.chunk.js",
-    "main.js.map": "/github-actions-demo/static/js/main.35f3b1c4.chunk.js.map",
+    "main.css": "/github-actions-demo/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/github-actions-demo/static/js/main.6f9505fb.chunk.js",
+    "main.js.map": "/github-actions-demo/static/js/main.6f9505fb.chunk.js.map",
     "runtime-main.js": "/github-actions-demo/static/js/runtime-main.afc89ba9.js",
     "runtime-main.js.map": "/github-actions-demo/static/js/runtime-main.afc89ba9.js.map",
     "static/js/2.90254d6f.chunk.js": "/github-actions-demo/static/js/2.90254d6f.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.73c178f6.chunk.js": "/github-actions-demo/static/js/3.73c178f6.chunk.js",
     "static/js/3.73c178f6.chunk.js.map": "/github-actions-demo/static/js/3.73c178f6.chunk.js.map",
     "index.html": "/github-actions-demo/index.html",
-    "static/css/main.2ae47eeb.chunk.css.map": "/github-actions-demo/static/css/main.2ae47eeb.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/github-actions-demo/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.90254d6f.chunk.js.LICENSE.txt": "/github-actions-demo/static/js/2.90254d6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.afc89ba9.js",
     "static/js/2.90254d6f.chunk.js",
-    "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.35f3b1c4.chunk.js"
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.6f9505fb.chunk.js"
   ]
 }
