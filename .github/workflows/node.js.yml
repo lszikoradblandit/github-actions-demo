@@ -31,6 +31,16 @@ jobs:
       - name: Ejecutar los tests
         run: npm test
         working-directory: ./backend
+
+
+  publish-backend:
+    runs-on: ubuntu-latest
+
+    needs: build-backend
+
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v2
       - name: Deploy en Heroku
         uses: akhileshns/heroku-deploy@v3.8.8
         with:
@@ -39,7 +49,8 @@ jobs:
           heroku_email: "lszikora@dblandit.com"
           appdir: ./backend
 
-#  build-frontend:
+
+        #  build-frontend:
 #
 #    runs-on: ubuntu-latest
 #
