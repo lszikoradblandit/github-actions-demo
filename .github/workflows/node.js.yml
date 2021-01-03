@@ -62,5 +62,14 @@ jobs:
         run: npm install
         working-directory: ./frontend
       - name: Desplegar la app en GH Pages
-        run: npm run deploy
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git remote set-url origin https://${token}@github.com/${repository}
+          npm run deploy
+        env:
+          user_name: 'lszikora'
+          user_email: 'lszikora@dblandit.com'
+          token: ${{ secrets.GH_PAGES_TOKEN }}
+          respository: ${{ github.repository }}
         working-directory: ./frontend
