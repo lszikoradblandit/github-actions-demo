@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Descargar el código
         uses: actions/checkout@v2
+        with:
+          path: ./backend
       - name: Setup Node.js utilizando versión ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
