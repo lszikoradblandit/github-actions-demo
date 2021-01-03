@@ -1,0 +1,12 @@
+const app = require('../app');
+const request = require('supertest')(app);
+
+test('GET /count debería responder el valor del contador', async () => {
+    const response = await request.get('/count');
+    expect(typeof parseInt(response.body.value)).toBe('number');
+});
+
+test('POST /count debería responder correctamente', async () => {
+    const response = await request.post('/count').send({"counter": 1});
+    expect(response.body.value).toBe("Contador actualizado")
+})
