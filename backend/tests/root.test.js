@@ -10,3 +10,8 @@ test('POST /count debería responder correctamente', async () => {
     const response = await request.post('/count').send({"counter": 1});
     expect(response.body.value).toBe("Contador actualizado")
 })
+
+test('GET / debería responder 404', async () => {
+    const response = await request.get('/')
+    expect(response.status).toBe(404);
+})
