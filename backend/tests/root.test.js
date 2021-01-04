@@ -15,3 +15,9 @@ test('GET / debería responder 404', async () => {
     const response = await request.get('/')
     expect(response.status).toBe(404);
 })
+
+test('GET /redis-hc debería responder 200', async () => {
+    const response = await request.get('/redis-hc');
+    console.log(response.body.connected);
+    expect(response.status).toBe(200);
+})
