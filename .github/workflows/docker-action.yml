@@ -23,5 +23,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ secrets.DOCKER_USER }}/backend
           tag_with_ref: true
-          path: ./backend
 

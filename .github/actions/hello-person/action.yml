@@ -1,0 +1,15 @@
+name: 'Hello person'
+description: 'Saluda a alguien y devuelve la hora'
+inputs:
+  who-to-greet:  # id del input input
+    description: 'Persona a ser saludada'
+    required: true
+    default: 'World'
+outputs:
+  time: # id del output
+    description: 'Tiempo retornado'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
