@@ -13,8 +13,6 @@ jobs:
   publish-backend-docker:
     runs-on: ubuntu-latest
 
-    needs: build-backend
-
     steps:
       - name: Descargar el código
         uses: actions/checkout@v2
